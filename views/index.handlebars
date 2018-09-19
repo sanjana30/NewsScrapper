@@ -1,0 +1,43 @@
+<style media="screen">
+  .card {
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  a {
+    margin: 5px;
+  }
+
+  .comment-form-class {
+    display: none
+  }
+</style>
+<h1>News</h1>
+{{#if data.length}} {{#each data}} {{!--
+<p>{{this.title}}</p>
+<p>{{this.link}}</p> --}}
+
+<div class="card">
+
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <p class="card-text">{{this.link}}</p>
+  </div>
+  <h5 class="card-footer">
+    <button class="like" data-id="{{this._id}}">Like</button>
+    <button class="comment" data-id="{{this._id}}" >Comment</button>
+  </h5>
+</div>
+
+
+{{/each}} {{else}}
+<h3>No records found.</h3>
+
+{{/if}} {{!--
+<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm2">Big modal</button> --}}
+
+
+
+
+<script type="text/javascript" src="./app.js"></script>

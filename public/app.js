@@ -5,7 +5,7 @@ $("#clear").on("click", function () {
     }).then(function (response) {
         console.log(response);
         // location.reload();
-        window.location.href = "/all";
+        window.location.href = "/";
     });
 });
 
@@ -20,7 +20,7 @@ $("#scrape").on("click", function (event) {
         console.log("ajax scrape call");
         console.log(response);
         // location.reload();
-        window.location.href = "/all";
+        window.location.href = "/";
 
     });
 });

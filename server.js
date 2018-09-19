@@ -29,7 +29,7 @@ app.set("view engine", "handlebars");
 //     res.render("index");
 // })
 
-app.get("/all", function (req, res) {
+app.get("/", function (req, res) {
     console.log("/all route is getting hit by button");
     db.scrapedNews.find({}, function (error, found) {
         if (error) {
